@@ -3,6 +3,7 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Social } from "../typings";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 type Props = {
   socials: Social[];
@@ -36,34 +37,30 @@ function Header({ socials }: Props) {
           />
         ))}
       </motion.div>
-      <Link href="#contact">
-        <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 1.5,
-          }}
-          className="flex flex-row items-center text-gray-300 cursor-pointer"
-        >
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
-          />
+
+      <motion.div
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-row items-center text-gray-300 cursor-pointer"
+      >
+        <Link href="#contact" className="flex items-center">
+        <MailOutlineIcon className="text-[28px] mr-2 text-gray-500"/>
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get In Touch
           </p>
-        </motion.div>
-      </Link>
+        </Link>
+      </motion.div>
     </header>
   );
 }

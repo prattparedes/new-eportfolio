@@ -19,7 +19,7 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scrol overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full flex overflow-x-scrol overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects?.map((project, i) => (
           <div
             key={i}
@@ -32,9 +32,10 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               src={urlFor(project.image).url()}
               alt=""
+              className="max-w-[200px] object-contain"
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+            <div className="space-y-5 px-0 md:px-10 max-w-6xl">
+              <h4 className="text-2xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
@@ -43,7 +44,7 @@ function Projects({ projects }: Props) {
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology) => (
                   <img
-                    className="h-10 w-10"
+                    className="h-8 w-8"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                     alt=""
@@ -51,7 +52,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
+              <p className="text-base text-center md:text-left">
                 {project.summary}
               </p>
             </div>
