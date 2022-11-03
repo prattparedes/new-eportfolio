@@ -31,13 +31,13 @@ export default function Home({
   socials,
 }: Props) {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scroll-smooth">
+    <div className="bg-[#0B172A] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#BC4123]/80 scroll-smooth">
       <Head>
         <title>Pratt's ePortfolio</title>
       </Head>
 
       <Header socials={socials} />
-      <section id="hero" className="snap-start">
+      <section id="hero" className="snap-start fondoHero bg">
         <Hero pageInfo={pageInfo}/>
       </section>
 
@@ -62,8 +62,8 @@ export default function Home({
       </section>
 
       <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
+        <footer className="sticky bottom-5 w-10 ml-[50%]">
+          <div className="flex items-center justify-center ">
             <img
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
               src="https://lh3.googleusercontent.com/a/ALm5wu1sFGv44GDqFXAtyl1NiugcTuEElQV6vvYG6r0ckg=s360-p-rw-no"

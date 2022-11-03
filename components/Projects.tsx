@@ -21,13 +21,13 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scrol overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#BC4123]/80">
         {projects?.map((project, i) => (
           <div
             key={i}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-16 md:p-20 h-screen mt-20"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-16 md:p-20 h-screen mt-20 max-h-[650px]"
           >
-            <div className="relative group  hover:border-[#F7AB0A]/60 hover:border-[0.5px] transition-all ease-in-out duration-150">
+            <div className="relative group  hover:border-[#BC4123]/60 hover:border-[0.5px] transition-all ease-in-out duration-150">
               <motion.img
                 initial={{ y: -300, opacity: 0 }}
                 transition={{ duration: 1.2 }}
@@ -40,7 +40,7 @@ function Projects({ projects }: Props) {
               <div className="absolute text-lg flex items-center justify-center flex-col top-[50%] left-[50%] translate-x-[70%] translate-y-[-50%] opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300 group-hover:translate-x-[-50%]">
                 <p>
                   See More{" "}
-                  <span className="text-[#F7AB0A]/80 text-[32px]">↗</span>{" "}
+                  <span className="text-[#BC4123]/80 text-[32px]">↗</span>{" "}
                 </p>
                 <div className="flex space-x-4 mt-2">
                   <Link href={project.linkToBuild} target="_blank">
@@ -66,7 +66,7 @@ function Projects({ projects }: Props) {
             </div>
             <div className="space-y-4 px-0 md:px-10 max-w-6xl">
               <h4 className="text-2xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]/50">
+                <span className="underline decoration-[#BC4123]/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
                 {project.title}
@@ -90,7 +90,7 @@ function Projects({ projects }: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      <div className="w-full absolute top-[30%] bg-[#CB4123]/20 left-0 h-[500px] -skew-y-12" />
     </motion.div>
   );
 }

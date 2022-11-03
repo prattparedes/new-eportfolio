@@ -30,19 +30,19 @@ function ContactMe({}: Props) {
       <div className="flex flex-col space-y-10 mt-20">
         <h4 className="text-4xl font-semibold text-center">
           I have just what you need.{" "}
-          <span className="decoration-[#F7AB0A] underline">Let's Talk.</span>
+          <span className="decoration-[#BC4123] underline">Let's Talk.</span>
         </h4>
         <div className="space-y-5">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-[#BC4123] h-7 w-7 animate-pulse" />
             <p className="text-2xl">+51 933185756</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-[#BC4123] h-7 w-7 animate-pulse" />
             <p className="text-2xl">pratt@prattparedes.com</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <MapPinIcon className="text-[#BC4123] h-7 w-7 animate-pulse" />
             <p className="text-2xl">San Juan de Lurigancho, Lima.</p>
           </div>
 
@@ -62,7 +62,7 @@ function ContactMe({}: Props) {
             <textarea {...register('message')} placeholder="Message" className="contactInput" />
             <button
               type="submit"
-              className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+              className="bg-[#BC4123] py-5 px-10 rounded-md text-black font-bold text-lg"
             >
               Submit
             </button>

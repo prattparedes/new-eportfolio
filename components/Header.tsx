@@ -32,7 +32,7 @@ function Header({ socials }: Props) {
           <SocialIcon
             key={social._id}
             url={social.url}
-            fgColor="gray"
+            fgColor="white"
             bgColor="transparent"
           />
         ))}
@@ -55,8 +55,8 @@ function Header({ socials }: Props) {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         <Link href="#contact" className="flex items-center">
-        <MailOutlineIcon className="text-[28px] mr-2 text-gray-500"/>
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <MailOutlineIcon className="text-[28px] mr-2 text-white"/>
+          <p className="uppercase hidden md:inline-flex text-sm text-white">
             Get In Touch
           </p>
         </Link>
