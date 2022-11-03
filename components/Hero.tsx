@@ -23,7 +23,7 @@ function Hero({}: Props) {
       <BackgroundCircles />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src="https://firebasestorage.googleapis.com/v0/b/twitter-clone-yt-1b75f.appspot.com/o/images%2FFotoLinkedin.jfif?alt=media&token=123f871e-a552-4699-b6e3-336c1884538b"
+        src="https://lh3.googleusercontent.com/a/ALm5wu1sFGv44GDqFXAtyl1NiugcTuEElQV6vvYG6r0ckg=s360-p-rw-no"
         alt=""
       />
       <div className="z-20">
