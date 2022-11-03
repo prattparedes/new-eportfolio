@@ -27,12 +27,12 @@ function ContactMe({}: Props) {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-10 mt-20">
         <h4 className="text-4xl font-semibold text-center">
           I have just what you need.{" "}
           <span className="decoration-[#F7AB0A] underline">Let's Talk.</span>
         </h4>
-        <div className="space-y-10">
+        <div className="space-y-5">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">+51 933185756</p>
