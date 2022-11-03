@@ -1,3 +1,16 @@
+// import { groq } from "next-sanity";
+// import { sanityClient } from "../sanity";
+
+// const query = groq`
+//     *[_type == "experience"] {
+//       ...,
+//       technologies[]->
+//     }
+// `;
+
+
+// // from the getExperience folder
+
 import { Experience } from "../typings";
 
 export const fetchExperiences = async () => {
