@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -28,7 +32,7 @@ function About({}: Props) {
           x: 0,
         }}
         viewport={{ once: true }}
-        src="https://firebasestorage.googleapis.com/v0/b/twitter-clone-yt-1b75f.appspot.com/o/images%2FFotoIg2.png?alt=media&token=6062388a-1833-4558-acb4-15d5a6d54a32"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px]"
       />
       <div className="space-y-10 px-0 md:px-10">
@@ -38,17 +42,7 @@ function About({}: Props) {
           background
         </h4>
         <p className="text-sm">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
-          dolores sint, tempora ex voluptate nam exercitationem expedita culpa!
-          Soluta architecto labore iste iure corrupti quaerat, dolorum debitis
-          quidem laboriosam voluptatem. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Expedita corporis dignissimos maxime fugit incidunt
-          aperiam, iste molestiae repudiandae totam suscipit pariatur dicta
-          molestias veniam magni, laborum libero omnis, quibusdam dolor. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Quisquam modi
-          ratione quas, adipisci totam officiis obcaecati quo et ducimus
-          necessitatibus voluptatem voluptatum nostrum facere fugit, assumenda
-          tenetur, magni maxime sapiente.
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>
