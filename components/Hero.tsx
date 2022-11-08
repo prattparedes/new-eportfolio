@@ -36,22 +36,22 @@ function Hero({ pageInfo }: Props) {
         <h2 className="text-sm uppercase text-[white]/80 pb-2 tracking-[8px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-[22px] lg:text-6xl md:text-4xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#BC4123" />
         </h1>
-        <div className="pt-5 space-x-4">
+        <div className="pt-5 sm:space-x-4 flex flex-wrap justify-center">
           <Link href="#about">
-            <button className="heroButton">About</button>
+            <button className="heroButton m-[8px] sm:m-0">About</button>
           </Link>
           <Link href="#experience">
-            <button className="heroButton">Experience</button>
+            <button className="heroButton m-[8px] sm:m-0">Experience</button>
           </Link>
           <Link href="#skills">
-            <button className="heroButton">Skills</button>
+            <button className="heroButton m-[8px] sm:m-0">Skills</button>
           </Link>
           <Link href="#projects">
-            <button className="heroButton">Projects</button>
+            <button className="heroButton m-[8px] sm:m-0">Projects</button>
           </Link>
         </div>
       </div>

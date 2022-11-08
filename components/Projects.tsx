@@ -17,7 +17,7 @@ function Projects({ projects }: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl mr-[-20px]">
         Projects
       </h3>
 
@@ -25,7 +25,7 @@ function Projects({ projects }: Props) {
         {projects?.map((project, i) => (
           <div
             key={i}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-16 md:p-20 h-screen mt-20 max-h-[650px]"
+            className="w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center p-10 sm:p-16 md:p-20 h-screen mt-20 max-h-[650px]"
           >
             <div className="relative group  hover:border-[#BC4123]/60 hover:border-[0.5px] transition-all ease-in-out duration-150">
               <motion.img
@@ -35,14 +35,14 @@ function Projects({ projects }: Props) {
                 viewport={{ once: true }}
                 src={urlFor(project.image).url()}
                 alt=""
-                className="max-h-[280px] object-contain group-hover:opacity-[25%] transition ease duration-300"
+                className="max-h-[160px] sm:max-h-[280px] object-contain group-hover:opacity-[25%] transition ease duration-300"
               />
-              <div className="absolute text-lg flex items-center justify-center flex-col top-[50%] left-[50%] translate-x-[70%] translate-y-[-50%] opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300 group-hover:translate-x-[-50%]">
+              <div className="absolute text-[14px] sm:text-lg flex items-center justify-center flex-col top-[50%] left-[50%] translate-x-[70%] translate-y-[-50%] opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300 group-hover:translate-x-[-50%]">
                 <p>
                   See More{" "}
-                  <span className="text-[#BC4123]/80 text-[32px]">↗</span>{" "}
+                  <span className="text-[#BC4123]/80 text-[20px] sm:text-[32px]">↗</span>{" "}
                 </p>
-                <div className="flex space-x-4 mt-2">
+                <div className="flex space-x-4 mt-2 items-center">
                   <Link href={project.linkToBuild} target="_blank">
                     <Image
                       className="invert"
@@ -64,8 +64,8 @@ function Projects({ projects }: Props) {
                 </div>
               </div>
             </div>
-            <div className="space-y-4 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-2xl font-semibold text-center">
+            <div className="space-y-2 sm:space-y-4 px-0 md:px-10 max-w-6xl mb-[52px] mt-[20px]">
+              <h4 className="text-[18px] sm:text-2xl font-semibold text-center">
                 <span className="underline decoration-[#BC4123]/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
@@ -74,7 +74,7 @@ function Projects({ projects }: Props) {
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology) => (
                   <img
-                    className="h-8 w-8 rounded-full object-contain"
+                    className="h-6 w-6 sm:h-8 sm:w-8 rounded-full object-contain"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                     alt=""
@@ -82,7 +82,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-base text-center md:text-left">
+              <p className="text-[12px] sm:text-base text-center md:text-left">
                 {project.summary}
               </p>
             </div>
